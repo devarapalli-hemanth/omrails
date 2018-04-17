@@ -14,10 +14,12 @@
     <nav class="navbar navbar-inverse navbar-toggleable-md bg-inverse">
       <div class="container">
         <%= link_to "One Month Rails", root_path, class: "navbar-brand" %>
-        <ul class="navbar-nav">
+        <ul class="nav navbar-left  nav-pills nav-stacked mr-auto">
           <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "About", about_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Contact", contact_us_path, class: "nav-link" %></li>
+        </ul>
+        <ul class="nav navbar-left nav-pills nav-stacked">
           <% if user_signed_in? %>
           <li class="nav-item pull-md-right"><%= link_to "log out", signout_path, method: :delete, class: "nav-link" %></li>
           <% else %>
